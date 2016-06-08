@@ -1,10 +1,14 @@
+require 'pry'
 
-def alphabetize(arr)
-    ESPERANTO_ALPHABET = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz"
+
+ESPERANTO_ALPHABET = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz"
   
+def alphabetize(arr)
   alphabetized = arr.sort_by do |word|
-    word.split('').map do |char|
+    result=word.split('').map do |char|
         ESPERANTO_ALPHABET.index(char)
+    
     end
+    #binding.pry
   end
 end
